@@ -1,0 +1,21 @@
+main > div {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 2vh;
+  flex-direction: column;
+}
+
+section {
+  width: 20rem;
+  background: rgba(var(--white), 0.1);
+  padding: 0 1rem 1rem;
+  border-radius: 10px;
+  box-shadow: var(--default-shadow);
+  display: flex;
+  flex-direction: column;
+
+}
+
+button {
+  align-self: center;
+}

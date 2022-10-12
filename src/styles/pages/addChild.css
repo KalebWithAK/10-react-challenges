@@ -1,0 +1,10 @@
+section.child {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--default-shadow);
+  margin: 1vh 0;
+}
+
+section {
+  width: max-content;
+  padding: 1rem;
+}

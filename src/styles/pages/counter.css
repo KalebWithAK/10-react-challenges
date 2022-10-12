@@ -1,0 +1,21 @@
+main.counter section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(var(--white), 0);
+  box-shadow: none;
+}
+
+main.counter button {
+  width: 2rem;
+  height: 2rem;
+  padding: 0 0 0.5vh 0;
+  border-radius: 50%;
+}
+
+main.counter p {
+  width: 5rem;
+  text-align: center;
+}

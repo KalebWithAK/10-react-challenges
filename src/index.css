@@ -1,3 +1,14 @@
+:root {
+  --background: #121212;
+
+  --white: 255, 255, 255;
+  --black: 0, 0, 0;
+  --primary: 187, 134, 252;
+  --secondary: 3, 218, 197;
+
+  --default-shadow: 2px 2px 2px 2px rgba(var(--black), 0.2), -2px -2px 2px 2px rgba(var(--black), 0.2);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +16,83 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--background);
+  color: rgba(var(--white), 1);
+  font-size: 1.5rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+header nav {
+  margin-left: auto;
+  display: flex;
+}
+
+a {
+  color: rgba(var(--secondary), 1);
+  text-decoration: none;
+  position: relative;
+}
+a::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(var(--secondary), 1);
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-in-out;
+}
+a:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+div.page {
+  margin: 1vh 2vw;
+}
+
+main {
+  width: fit-content;
+  max-width: 80%;
+  margin: auto;
+  background: rgba(var(--white), 0.05);
+  padding: 0.5rem 1rem 0.5rem;
+  border-radius: 10px;
+  box-shadow: var(--default-shadow);
+}
+
+button {
+  background: rgba(var(--primary), 1);
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+  border: none;
+  border-radius: 9999px;
+  -webkit-appearance: none;
+  transition: 0.2s;
+  color: rgba(var(--black), 1);
+}
+button:hover {
+  cursor: pointer;
+  box-shadow: var(--default-shadow);
+}
+button:active {
+  background: rgba(var(--primary), 0.8)
+}
+input {
+  font-size: 1.25rem;
+}
+
+ul li {
+  list-style-type: square;
+  color: rgb(var(--primary));
 }
